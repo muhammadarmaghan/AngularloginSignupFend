@@ -1,0 +1,13 @@
+
+<h1>Sign up</h1><br/>
+    <form class="login" [formGroup]="registerForm">
+    <span class="input"></span>
+    <input name="name" formControlName="name" type="text" placeholder="Name" title="Format: Xx[space]Xx (e.g. Alex Cican)" />
+    <span class="input"></span>
+    <input name="email" formControlName="email" type="email" placeholder="your@email.com" />
+    <span id="passwordMeter"></span>
+    <input name="password" formControlName="password" type="password" placeholder="Password" title="Password min 8 characters. At least one UPPERCASE and one lowercase letter"  />
+    <span id="passwordMeter"></span>
+    <input name="password" formControlName="confirm_password" type="password" placeholder="Password" title="Password min 8 characters. At least one UPPERCASE and one lowercase letter"  />
+    <button type="submit" [disabled]="!registerForm.valid" (click)="save()" value="Sign Up" title="Submit form" class="icon-arrow-right"><span>Sign up</span></button>
+    </form>  
